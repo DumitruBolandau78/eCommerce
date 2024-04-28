@@ -2,7 +2,9 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const hbsrs = require('express-handlebars');
-const indexRouter = require('./routes/index');
+const indexRoutes = require('./routes/index');
+const adminpanelRoutes = require('./routes/admin-panel');
+const accountRoutes = require('./routes/account');
 
 const app = express();
 
@@ -23,7 +25,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-app.use('/', indexRouter);
+app.use('/', indexRoutes);
+app.use('/admin-panel', adminpanelRoutes);
+app.use('/account', accountRoutes);
 
 const PORT = 5000 || process.env.PORT;
 
