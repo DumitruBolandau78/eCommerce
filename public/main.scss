@@ -99,7 +99,7 @@ a {
 
             li {
                 text-align: center;
-                padding: .4rem 2rem .4rem 0;
+                padding: .4rem 1rem .4rem 1rem;
             }
 
             a {
@@ -136,6 +136,7 @@ a {
             .title {
                 font-size: 4rem;
                 font-family: $fontAlpha;
+                font-weight: 400;
             }
 
             .content {
@@ -186,6 +187,8 @@ a {
                     border-bottom-right-radius: 10rem;
                     position: relative;
                     z-index: 10;
+                    object-fit: cover;
+                    object-position: center;
                 }
             }
         }
@@ -284,18 +287,16 @@ a {
 
             .category-name {
                 display: flex;
+                flex-wrap: wrap;
+                gap: .5rem;
 
                 div {
-                    margin: 0 1.5rem;
+                    margin-right: 1.5rem;
                     cursor: pointer;
 
                     &.active {
                         font-weight: bold;
                     }
-                }
-
-                .all-products {
-                    margin-left: 0;
                 }
             }
 
@@ -577,6 +578,10 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .container .top-main-wrapper .product {
+        padding: 1rem 1rem 5rem 1rem;
+    }
+
     .container .top-main-wrapper .content {
         align-items: center;
         text-align: center;
@@ -584,5 +589,89 @@ a {
 
     .instagram-and-newsletters-wrapper .inner .collection {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .zara-collection-wrapper .inner .content{
+        grid-column: 1 / 3;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px){
+    .container .explore-wrapper .category .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer .additional-info .additional-info-inner {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .navbar {
+        a.shoping {
+            display: none !important;
+        }
+    }
+
+    h2.title {
+        font-size: 2rem !important;
+    }
+
+    .product .text {
+        font-size: 1.3rem !important;
+    }
+
+    .vertical-text {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media (max-width: 450px){
+    .instagram-and-newsletters-wrapper .inner .form-email {
+        flex-direction: column;
+        align-items: center;
+    }
+    .instagram-and-newsletters-wrapper .inner .form-email input {
+        text-align: center;
+    }
+    .instagram-and-newsletters-wrapper .inner .form-email button {
+        width: fit-content;
+    }
+
+    #splide {
+        .card-title {
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .type-and-price {
+            flex-direction: column;
+            gap: .7rem;
+            text-align: center;
+        }
+    }
+
+    .instagram-and-newsletters-wrapper ,.collection {
+        gap: .8rem !important;
+    }
+
+    .footer-payments img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px){
+    .filter-menu {
+        flex-direction: column;
+        gap: 1rem;
+
+        .category-name {
+            justify-content: center;
+
+            div {
+                margin: 0 1rem !important;
+            }
+        }
     }
 }
