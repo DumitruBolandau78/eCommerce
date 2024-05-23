@@ -85,11 +85,14 @@ a {
 }
 .header .menu ul li {
   text-align: center;
-  padding: 0.4rem 1rem 0.4rem 1rem;
+  padding: 0.4rem 2.5rem 0.4rem 2.5rem;
 }
 .header .menu ul a {
   font-family: "Open Sans", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+}
+.header .menu ul a.active {
+  border-bottom: 2px solid #1E2832;
 }
 
 .container {
@@ -175,6 +178,19 @@ a {
   width: 100%;
   max-width: 1400px;
 }
+.container .explore-wrapper .go-home {
+  margin-bottom: 1.5rem;
+}
+.container .explore-wrapper .go-home a {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .explore-wrapper .go-home svg {
+  max-width: 2rem;
+  max-height: 2rem;
+}
 .container .explore-wrapper .brands {
   padding: 5rem 0;
 }
@@ -237,7 +253,7 @@ a {
   overflow: hidden;
 }
 .container .explore-wrapper .category {
-  margin: 8rem 0;
+  margin: 7rem 0 8rem 0;
 }
 .container .explore-wrapper .category .title {
   font-size: 3rem;
@@ -590,7 +606,7 @@ a {
   font-family: "Poppins", sans-serif;
 }
 
-.container .form {
+.account-wrapper .form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -598,27 +614,27 @@ a {
   gap: 25px;
 }
 
-.container .form.signin,
-.container.signinForm .form.signup {
+.account-wrapper .form.signin,
+.account-wrapper.signinForm .form.signup {
   display: none;
 }
 
-.container.signinForm .form.signin {
+.account-wrapper.signinForm .form.signin {
   display: flex;
 }
 
-.container .form h2 {
+.account-wrapper .form h2 {
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.1em;
 }
 
-.container .form .inputBox {
+.account-wrapper .form .inputBox {
   position: relative;
   width: 300px;
 }
 
-.container .form .inputBox input {
+.account-wrapper .form .inputBox input {
   padding: 12px 10px 12px 48px;
   border: none;
   width: 100%;
@@ -633,7 +649,7 @@ a {
   outline: none;
 }
 
-.container .form .inputBox span {
+.account-wrapper .form .inputBox span {
   position: absolute;
   left: 0;
   padding: 12px 10px 12px 48px;
@@ -645,8 +661,8 @@ a {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.container .form .inputBox input:valid ~ span,
-.container .form .inputBox input:focus ~ span {
+.account-wrapper .form .inputBox input:valid ~ span,
+.account-wrapper .form .inputBox input:focus ~ span {
   color: #00dfc4;
   border: 1px solid #00dfc4;
   background: #223243;
@@ -657,12 +673,12 @@ a {
   letter-spacing: 0.1em;
 }
 
-.container .form .inputBox input:valid,
-.container .form .inputBox input:focus {
+.account-wrapper .form .inputBox input:valid,
+.account-wrapper .form .inputBox input:focus {
   border: 1px solid #00dfc4;
 }
 
-.container .form .inputBox i {
+.account-wrapper .form .inputBox i {
   position: absolute;
   top: 15px;
   left: 16px;
@@ -673,7 +689,7 @@ a {
   border-right: 1px solid #00dfc4;
 }
 
-.container .form .inputBox input[type=submit] {
+.account-wrapper .form .inputBox input[type=submit] {
   background: #00dfc4;
   color: #223243;
   padding: 10px 0;
@@ -682,13 +698,13 @@ a {
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.35), inset -5px -5px 15px rgba(255, 255, 255, 0.1), inset 5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
-.container .form p {
+.account-wrapper .form p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.75em;
   font-weight: 300;
 }
 
-.container .form p a {
+.account-wrapper .form p a {
   font-weight: 500;
   color: #fff;
 }/*# sourceMappingURL=main.css.map */

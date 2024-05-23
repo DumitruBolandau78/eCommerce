@@ -1,26 +1,66 @@
 <header class="header" id="header">
     <div class="inner">
         <nav class="navbar">
-            <a href="" class="shoping"><img src="/images/icons/shoping.svg" alt="shoping"> Shoping</a>
+            {{#if isAuth}}
+                <a href="/cart" class="shoping"><img src="/images/icons/shoping.svg" alt="shoping"> Cart</a>
+            {{else}}
+                <a href="/account/login" class="shoping"><img src="/images/icons/shoping.svg" alt="shoping"> Cart</a>
+            {{/if}}
+
             <a class="logo" href="/">
                 <img src="/images/icons/arrows-logo.svg" alt="arrows">
                 <span>CORAL</span>
                 <img src="/images/icons/arrows-logo.svg" alt="arrows">
             </a>
             <ul class="navigation">
-                <li><a href="/account"><img src="/images/icons/user.svg" alt="user"> Account</a></li>
+                {{#if isAuth}}
+                    <li><a href="/account/logout"><img src="/images/icons/user.svg" alt="user"> Log out</a></li>
+                {{else}}
+                    <li><a href="/account/login"><img src="/images/icons/user.svg" alt="user"> Account</a></li>
+                {{/if}}
             </ul>
         </nav>
-        <menu class="menu">
-            <ul>
-                <li><a href="">Jewelry & Accessories</a></li>
-                <li><a href="">Clothing & Shoes</a></li>
-                <li><a href="">Home & Living</a></li>
-                <li><a href="">Wedding & Party</a></li>
-                <li><a href="">Toys & Entertainment</a></li>
-                <li><a href="">Art & Collectibles</a></li>
-                <li><a href="">Craft Supplies & Tools</a></li>
-            </ul>
-        </menu>
+        {{#if isSignup}}
+            
+        {{else}}
+            {{#if isLogin}}
+                
+            {{else}}
+                <menu class="menu">
+                    <ul>
+                        {{#if isBershka}}
+                            <li><a class="active" href="/collections/bershka">Bershka</a></li>
+                        {{else}}
+                            <li><a href="/collections/bershka">Bershka</a></li>
+                        {{/if}}
+                        
+                        {{#if isPullAndBear}}
+                            <li><a class="active" href="/collections/pull-and-bear">Pull&Bear</a></li>
+                        {{else}}
+                            <li><a href="/collections/pull-and-bear">Pull&Bear</a></li>
+                        {{/if}}
+                        
+                        {{#if isZara}}
+                            <li><a class="active" href="/collections/zara">ZARA</a></li>
+                        {{else}}
+                            <li><a href="/collections/zara">ZARA</a></li>
+                        {{/if}}
+                        
+                        {{#if isHAndM}}
+                            <li><a class="active" href="/collections/h-and-m">H&M</a></li>
+                        {{else}}
+                            <li><a href="/collections/h-and-m">H&M</a></li>
+                        {{/if}}
+                        
+                        {{#if isNewYorker}}
+                            <li><a class="active" href="/collections/new-yorker">NewYorker</a></li>
+                        {{else}}
+                            <li><a href="/collections/new-yorker">NewYorker</a></li>
+                        {{/if}}  
+                    </ul>
+                </menu>
+            {{/if}}
+        {{/if}}
+        
     </div>
 </header>
